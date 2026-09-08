@@ -1,0 +1,29 @@
+# Maya Research Cookbook
+
+> Runnable Maya Calyx-only TTS recipes and voice-agent integrations with 24 selected speakers. Default model: Maya Calyx. Default voice: Aarav. Use the cookbook catalog, not excluded voices from the broader API list. Start small; read current validation before claiming a path is verified.
+
+## Start
+- [Coding-agent instructions](AGENTS.md): setup, safety and evidence rules.
+- [Python TTS](quickstarts/python/README.md): one request to a checked WAV, no packages.
+- [TypeScript TTS](quickstarts/typescript/README.md): server-side Node.
+- [curl TTS](quickstarts/curl/README.md): response validation before conversion.
+
+## Voice agents
+- [LiveKit](integrations/livekit/README.md): pinned Maya-maintained plugin.
+- [Pipecat](integrations/pipecat/README.md): maintained community package, local WebRTC.
+- [Streaming](examples/streaming-tts/README.md): readiness, PCM, single-use turns, cancellation.
+- [From scratch](examples/voice-agent-from-scratch/README.md): microphone or synthetic WAV, STT, LLM, Maya, speaker.
+
+## Reference
+- [API overview](docs/api-reference/README.md)
+- [HTTP reference](docs/api-reference/http.md)
+- [WebSocket lifecycle](docs/api-reference/websocket.md)
+- [Catalog snapshot](docs/api-reference/catalog.json)
+- [All speakers and sample coverage](docs/speakers.md)
+- [Troubleshooting](docs/troubleshooting.md)
+- [Production checklist](docs/production-checklist.md)
+- [Validation](docs/validation.md)
+- [Maintenance](docs/maintenance.md)
+- [Canonical Maya documentation](https://www.mayaresearch.ai/llm.txt)
+
+These are repository-relative links. Resolve against this file's directory. AGENTS.md contains execution instructions; this index does not replace them. No credential belongs in an agent prompt.

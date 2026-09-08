@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+.venv/
+node_modules/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+artifacts/
+*.wav
+*.pcm
+*.mulaw
+dist/
+*.egg-info/
+.DS_Store

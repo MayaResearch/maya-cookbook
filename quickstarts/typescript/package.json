@@ -1,0 +1,13 @@
+{
+  "name": "maya-typescript-quickstart",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=22.18"},
+  "scripts": {
+    "start": "node --experimental-strip-types tts.ts",
+    "test": "node --experimental-strip-types --test tts.test.ts",
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {"typescript": "7.0.2", "@types/node": "22.19.0"}
+}

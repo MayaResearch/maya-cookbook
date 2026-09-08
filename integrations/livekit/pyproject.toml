@@ -1,0 +1,11 @@
+[project]
+name = "maya-livekit-cookbook"
+version = "0.1.0"
+requires-python = ">=3.12,<3.15"
+dependencies = [
+  "livekit-agents[silero]==1.8.0",
+  "livekit-plugins-soniox==1.8.0",
+  "livekit-plugins-openai==1.8.0",
+  "livekit-plugins-maya @ git+https://github.com/MayaResearch/livekit-agents@465562916000847dba3a26f329826b472b5c4b5d#subdirectory=livekit-plugins/livekit-plugins-maya",
+  "python-dotenv==1.2.3",
+]

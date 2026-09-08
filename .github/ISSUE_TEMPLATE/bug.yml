@@ -1,0 +1,30 @@
+name: Integration problem
+description: Report a reproducible cookbook problem without credentials or customer data.
+body:
+  - type: markdown
+    attributes:
+      value: Never include API keys, provider headers, private recordings or customer transcripts.
+  - type: input
+    id: example
+    attributes:
+      label: Which example and cookbook commit?
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: OS, runtime and package versions
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps and synthetic input to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result, actual result, and redacted error/format metadata
+    validations:
+      required: true

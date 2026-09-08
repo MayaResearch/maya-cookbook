@@ -1,0 +1,11 @@
+{
+  "verified_source_date": "2026-09-08",
+  "source": "https://www.mayaresearch.ai/llm.txt",
+  "source_sha256": "0746e49d3d312ad0edcaa7835a4afa9e9854510923c0da50bc3d6071eb279fc2",
+  "scope": "24 selected Maya Calyx voices; intentionally narrower than the public API reference",
+  "excluded_calyx_voices": ["Riley", "Christine", "Jackson", "Christopher", "Vance", "Shailika", "Gargi"],
+  "models": {
+    "Maya Calyx": ["Aarav", "Kabir", "Rohan", "Amit", "Kavita", "Sagar", "Arushi", "Neeraj", "SagarM", "Diya", "Neha", "Samar", "Nila", "Sana", "Rahul", "Rehan", "Seema", "Riya", "Shreeraj", "Tarini", "Tripti", "Vikas", "Vikram", "Zara"]
+  },
+  "languages": {"hi":"Hindi", "te":"Telugu", "bn":"Bengali", "gu":"Gujarati", "kn":"Kannada", "ml":"Malayalam", "mr":"Marathi", "or":"Odia", "pa":"Punjabi", "ta":"Tamil", "en":"Indian English"}
+}

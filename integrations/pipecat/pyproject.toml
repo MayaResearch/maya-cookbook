@@ -1,0 +1,12 @@
+[project]
+name = "maya-pipecat-cookbook"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+  "pipecat-ai[runner,webrtc,soniox,openrouter,silero]==1.8.1",
+  "pipecat-maya",
+  "python-dotenv==1.2.3",
+]
+
+[tool.uv.sources]
+pipecat-maya = { git = "https://github.com/MayaResearch/pipecat-maya", rev = "2c3b569074d5b36c99514596271426264c87b8ff" }

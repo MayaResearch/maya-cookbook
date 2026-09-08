@@ -1,0 +1,11 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+  - package-ecosystem: npm
+    directory: /quickstarts/typescript
+    schedule:
+      interval: weekly
+# Python uv locks are reviewed with the source-drift and maintenance procedure.
