@@ -6,7 +6,8 @@ Maya Calyx-only public beta, checked on 8 September 2026. Every example and blan
 
 | Layer | Current result | What it does not prove |
 | --- | --- | --- |
-| Clean release-only installation | 20 checks passed from a fresh extraction, with separate environments and no provider keys | Other operating systems or a GitHub-hosted CI run |
+| Clean release-only installation | 20 checks passed from a fresh extraction, with separate environments and no provider keys | Every operating system or runtime version |
+| Linux GitHub CI | Keyless suite and all five separate recipe install/import jobs passed in [the first main-branch run](https://github.com/MayaResearch/maya-cookbook/actions/runs/34258959362) | Paid provider calls or physical microphone/speaker behavior |
 | Python keyless tests | 183 passed after the 24-speaker selection, including rejection of excluded speakers; pytest 9.1.1 | Provider, browser or microphone behavior |
 | TypeScript tests | 33 passed after the selection change; strict type check passed. Earlier core checks also ran on Node 22.18.0 and 24.19.0 | Browser integration, perceptual quality |
 | Maya HTTP live checks | Every selected speaker has successful recorded synthesis; the Calyx-only recipe also passed fresh hi/te/en calls with Aarav before this selection-only change | Every pronunciation, naturalness or accent |
@@ -75,7 +76,7 @@ uv run --locked verify_tts.py --output pipecat.wav
 - [ ] Microphone/browser/interrupt tests and human listening for promised languages are recorded separately.
 - [ ] Independent agent handoff: an agent receives only the repo and the provided prompt, then its actual output is checked. This has not been performed by an independent agent in this build.
 - [x] Current source drift, local link checks and release-file scans pass.
-- [ ] Linux GitHub CI has actually executed successfully.
+- [x] Linux GitHub CI has executed successfully, including all five recipe installation/import jobs.
 - [x] Maya Research authorized publishing this scoped cookbook as a public beta.
 - [ ] A production maintainer roster, code ownership and security-response process are established.
 
