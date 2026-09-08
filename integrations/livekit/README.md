@@ -34,9 +34,13 @@ Ctrl+C stops the worker and local microphone session. Console mode does not depl
 
 ## Limits and troubleshooting
 
-Maya-maintained plugin at public commit `b37bbeac`, submitted as the independent [LiveKit PR 7175](https://github.com/livekit/agents/pull/7175), not an upstream release. Its `maya-research-tts` branch starts from upstream main and does not depend on another pending contribution. Released LiveKit is pinned to 1.8.0. `--no-sources` is important: the Maya fork's uv workspace redirects dependencies to its development workspace packages. The direct Git dependency still installs with this option. The plugin supports Maya Research voice models; this cookbook release currently tests Calyx with Aarav. Human microphone/browser quality checks are separate from imports and provider tests; changing settings is not evidence of support in every path.
+Maya-maintained plugin at public commit `a2333554`, submitted as the independent [LiveKit PR 7175](https://github.com/livekit/agents/pull/7175), not an upstream release. Its `maya-research-tts` branch starts from upstream main and does not depend on another pending contribution. Released LiveKit is pinned to 1.8.0. `--no-sources` is important: the Maya fork's uv workspace redirects dependencies to its development workspace packages. The direct Git dependency still installs with this option. The plugin supports Maya Research voice models; this cookbook release currently tests Calyx with Aarav. Human microphone/browser quality checks are separate from imports and provider tests; changing settings is not evidence of support in every path.
 
 For custom TTS usage, create one `stream()` per LiveKit segment, push incremental text, then call `end_input()`. Do not push new text after `flush()`. The plugin shares one Maya context across that segment's sentences and sends one final closer.
+
+On a Maya TTS instance, `update_options(language=None)` restores automatic/mixed-language handling for the next turn without interrupting an active turn. Omitting the argument leaves the current setting unchanged. This only updates TTS, not Soniox's separate language hints.
+
+Custom Maya URLs must use HTTPS/WSS; plaintext HTTP/WS is rejected before any request. The plugin tolerates a pause awaiting more LLM input after audio has arrived, then re-arms the response timeout on new text or the final closer. There is no per-sentence completion acknowledgement in v2, so applications must also bound the LLM/overall turn and always end or cancel abandoned input. This is not a guarantee that every word was spoken.
 
 See [troubleshooting](../../docs/troubleshooting.md) and [production requirements](../../docs/production-checklist.md). Tested version/date and any unverified steps are in the validation report; don't infer a universal quality or latency guarantee.
 

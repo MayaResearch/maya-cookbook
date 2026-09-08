@@ -831,7 +831,7 @@ wheels = [
 [[package]]
 name = "livekit-plugins-maya"
 version = "1.8.0"
-source = { git = "https://github.com/MayaResearch/livekit-agents?subdirectory=livekit-plugins%2Flivekit-plugins-maya&rev=b37bbeac7a5f423d1b822b04e1769d5b5f5a61e5#b37bbeac7a5f423d1b822b04e1769d5b5f5a61e5" }
+source = { git = "https://github.com/MayaResearch/livekit-agents?subdirectory=livekit-plugins%2Flivekit-plugins-maya&rev=a233355464f3baef158c1dab085579804a1c3890#a233355464f3baef158c1dab085579804a1c3890" }
 dependencies = [
     { name = "livekit-agents" },
 ]
@@ -915,7 +915,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "livekit-agents", extras = ["silero"], specifier = "==1.8.0" },
-    { name = "livekit-plugins-maya", git = "https://github.com/MayaResearch/livekit-agents?subdirectory=livekit-plugins%2Flivekit-plugins-maya&rev=b37bbeac7a5f423d1b822b04e1769d5b5f5a61e5" },
+    { name = "livekit-plugins-maya", git = "https://github.com/MayaResearch/livekit-agents?subdirectory=livekit-plugins%2Flivekit-plugins-maya&rev=a233355464f3baef158c1dab085579804a1c3890" },
     { name = "livekit-plugins-openai", specifier = "==1.8.0" },
     { name = "livekit-plugins-soniox", specifier = "==1.8.0" },
     { name = "python-dotenv", specifier = "==1.2.3" },

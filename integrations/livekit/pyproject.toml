@@ -6,6 +6,6 @@ dependencies = [
   "livekit-agents[silero]==1.8.0",
   "livekit-plugins-soniox==1.8.0",
   "livekit-plugins-openai==1.8.0",
-  "livekit-plugins-maya @ git+https://github.com/MayaResearch/livekit-agents@b37bbeac7a5f423d1b822b04e1769d5b5f5a61e5#subdirectory=livekit-plugins/livekit-plugins-maya",
+  "livekit-plugins-maya @ git+https://github.com/MayaResearch/livekit-agents@a233355464f3baef158c1dab085579804a1c3890#subdirectory=livekit-plugins/livekit-plugins-maya",
   "python-dotenv==1.2.3",
 ]
