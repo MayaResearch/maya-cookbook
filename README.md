@@ -54,6 +54,6 @@ Maya provides text-to-speech, not the entire conversational stack. The complete 
 
 These examples use [Maya's public API reference](https://www.mayaresearch.ai/llm.txt), checked on 8 September 2026. Dependencies and Git integrations are pinned in per-example lockfiles. Installing one example does not install all of them.
 
-The [Pipecat package](https://github.com/MayaResearch/pipecat-maya) is Maya-maintained. The [LiveKit plugin PR](https://github.com/livekit/agents/pull/6899) is not yet merged upstream. Integration-specific limitations are listed before each run command.
+The [Pipecat package](https://github.com/MayaResearch/pipecat-maya) is Maya-maintained. The new, independent [LiveKit plugin PR](https://github.com/livekit/agents/pull/7175) is not yet merged upstream. The cookbook pins its tested commit, not another pending PR or branch. Integration-specific limitations are listed before each run command.
 
 Report reproducible API problems to the public support contacts in the API reference. Include versions and request/session identifiers, not keys or customer recordings. See [contributing](CONTRIBUTING.md), [security](SECURITY.md) and the [code license](LICENSE). Example code does not grant model-weight, voice or customer-data rights.

@@ -34,7 +34,9 @@ Ctrl+C stops the worker and local microphone session. Console mode does not depl
 
 ## Limits and troubleshooting
 
-Maya-maintained plugin at public commit `fd724714`, submitted through [LiveKit PR 6899](https://github.com/livekit/agents/pull/6899), not an upstream release. Released LiveKit is pinned to 1.8.0. `--no-sources` is important: the Maya fork's uv workspace redirects dependencies to its development workspace packages. The direct Git dependency still installs with this option. The plugin supports Maya Research voice models; this cookbook release currently tests Calyx with Aarav. Human microphone/browser quality checks are separate from imports and provider tests; changing settings is not evidence of support in every path.
+Maya-maintained plugin at public commit `b37bbeac`, submitted as the independent [LiveKit PR 7175](https://github.com/livekit/agents/pull/7175), not an upstream release. Its `maya-research-tts` branch starts from upstream main and does not depend on another pending contribution. Released LiveKit is pinned to 1.8.0. `--no-sources` is important: the Maya fork's uv workspace redirects dependencies to its development workspace packages. The direct Git dependency still installs with this option. The plugin supports Maya Research voice models; this cookbook release currently tests Calyx with Aarav. Human microphone/browser quality checks are separate from imports and provider tests; changing settings is not evidence of support in every path.
+
+For custom TTS usage, create one `stream()` per LiveKit segment, push incremental text, then call `end_input()`. Do not push new text after `flush()`. The plugin shares one Maya context across that segment's sentences and sends one final closer.
 
 See [troubleshooting](../../docs/troubleshooting.md) and [production requirements](../../docs/production-checklist.md). Tested version/date and any unverified steps are in the validation report; don't infer a universal quality or latency guarantee.
 
