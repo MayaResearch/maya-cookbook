@@ -3,7 +3,7 @@
   "maya_docs": {"url":"https://www.mayaresearch.ai/llm.txt", "sha256":"0746e49d3d312ad0edcaa7835a4afa9e9854510923c0da50bc3d6071eb279fc2"},
   "integrations": [
     {"repo":"MayaResearch/pipecat-maya", "ref":"main", "sha":"2c3b569074d5b36c99514596271426264c87b8ff", "framework":"pipecat-ai", "version":"1.8.1", "status":"Maya-maintained community package"},
-    {"repo":"MayaResearch/livekit-agents", "ref":"maya-tts", "sha":"465562916000847dba3a26f329826b472b5c4b5d", "framework":"livekit-agents", "version":"1.8.0", "status":"Maya fork, upstream PR 6899 not merged"}
+    {"repo":"MayaResearch/livekit-agents", "ref":"maya-tts", "sha":"fd724714bc2f0dff6653578b9f979905be9c16f6", "framework":"livekit-agents", "version":"1.8.0", "status":"Maya fork, updated upstream PR 6899 awaiting review and merge"}
   ],
   "references": [
     "https://docs.livekit.io/agents/start/voice-ai/",

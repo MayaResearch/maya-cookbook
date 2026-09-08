@@ -1,6 +1,6 @@
 # Available speakers
 
-Checked against [Maya's API reference](https://www.mayaresearch.ai/llm.txt) on 8 September 2026. This cookbook offers **24 selected Maya Calyx speakers**, intentionally fewer than the 31 in that reference. Names and model names are case-sensitive. The [machine-readable catalog](api-reference/catalog.json) contains the exact selected values. Starter examples use `Aarav`.
+Checked against [Maya's API reference](https://www.mayaresearch.ai/llm.txt) on 8 September 2026. **Maya Calyx is the current supported model in the Maya Research Cookbook.** This release offers 24 selected speakers, intentionally fewer than the 31 in that reference. Names and model names are case-sensitive. The [machine-readable catalog](api-reference/catalog.json) contains the exact selected values. Starter examples use `Aarav`. This dated roster will change as tested model releases are added.
 
 | Model | Speaker names |
 | --- | --- |

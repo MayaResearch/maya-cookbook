@@ -41,7 +41,7 @@ class AudioSink(FrameProcessor):
 
 async def main(args):
     if args.model != "Maya Calyx":
-        raise ValueError("This cookbook supports Maya Calyx only")
+        raise ValueError("This cookbook release currently supports Maya Calyx")
     if args.voice not in CALYX_VOICES:
         raise ValueError("Choose a selected Calyx speaker from the cookbook catalog")
     if args.output.exists():

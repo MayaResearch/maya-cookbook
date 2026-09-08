@@ -1,6 +1,6 @@
 # Validation status
 
-Maya Calyx-only public beta, checked on 8 September 2026. Every example and blank configuration template selects `Maya Calyx` and defaults to `Aarav`; the current catalog offers 24 selected speakers. The recipes were built and exercised with synthetic speech. This is not a production certification or an upstream integration release.
+Maya Research Cookbook public beta, checked on 8 September 2026. The current tested model is `Maya Calyx`. Every example and blank configuration template selects it explicitly and defaults to `Aarav`; the current catalog offers 24 selected speakers. The recipes were built and exercised with synthetic speech. Results apply to these versions, not automatically to future models. This is not a production certification or an upstream integration release.
 
 ## Results
 
@@ -28,7 +28,17 @@ The Calyx-only retest passed all 10 workflow checks, covering 17 bounded synthes
 
 The speaker catalog is a selected Calyx-only subset. Selection checks were rerun without paid generation; the sample recordings are unchanged.
 
-Tests ran on macOS, Apple Silicon, Python 3.12.14. Core integrations are pinned to LiveKit 1.8.0 and Pipecat 1.8.1, with the Maya plugin Git revisions in [sources.json](sources.json). Linux CI is provided, including separate recipe install/import jobs; its result must be checked separately on GitHub. The latest source refresh found that Maya's guide now presents Calyx/Aarav, removes the other model and speed documentation, and links to merged Pipecat docs PR 1257. The diff was reviewed before updating the source checksum. The executable cookbook already selected Calyx/Aarav explicitly and omitted speed; its HTTP and v2 protocol behavior did not change. Both maintained integration branch heads are unchanged. Local links, formatting, types and release-file checks passed.
+Tests ran on macOS, Apple Silicon, Python 3.12.14. Core integrations are pinned to LiveKit 1.8.0 and Pipecat 1.8.1, with the Maya plugin Git revisions in [sources.json](sources.json). Linux CI is provided, including separate recipe install/import jobs; its result must be checked separately on GitHub. The source refresh found that Maya's guide now presents Calyx/Aarav, removes the other model and speed documentation, and links to merged Pipecat docs PR 1257. The diff was reviewed before updating the source checksum. The executable cookbook already selected Calyx/Aarav explicitly and omitted speed; its HTTP and v2 protocol behavior did not change.
+
+### LiveKit contribution follow-up, 8 September 2026
+
+The cookbook now pins Maya plugin commit `fd724714`, submitted through [LiveKit PR 6899](https://github.com/livekit/agents/pull/6899). It preserves the original contribution, resolves conflicts against the current LiveKit main branch, updates model/voice defaults, and rejects incompatible audio metadata before text is sent. Maya Research remains the provider name; Calyx is the currently documented model, not the permanent integration name.
+
+- 61 Maya plugin tests passed on each of Python 3.10.21, 3.12.14 and 3.13.15. The Python 3.12 combined plugin, audio-emitter and connection-pool run passed 87 tests. Focused strict typing, repository lint and formatting passed.
+- Eight real Maya checks passed: one-shot and streamed Hindi, Telugu and English, completed-turn connection reuse, active-turn cancellation, and a new turn after cancellation. Seven completed valid non-silent WAVs are kept privately.
+- The updated Maya plugin passed a fresh synthetic full-agent turn using this cookbook's locked LiveKit 1.8.0/provider environment: Soniox, OpenRouter and Maya produced 92,160 PCM bytes at the recorded sink, with no agent errors. A separate attempt using the LiveKit source checkout stopped during setup because its Silero asset was an unfetched Git LFS pointer, before that agent made provider calls. No installed dependency files were patched.
+
+These checks do not certify physical microphone/speaker behavior, LiveKit room transport, human listening quality, or an upstream package release. Maintainer review and merge are separate from local tests.
 
 The release-file scan checked credential patterns, blank credential templates and exact matches for the three credentials used in testing. It excludes real environment files, local environments, generated audio and private evidence. A scan is not a promise that every possible secret detector or dependency review has been completed.
 
@@ -48,7 +58,7 @@ pnpm test
 pnpm check
 ```
 
-Install each selected example separately using its README. LiveKit deliberately uses `--no-sources` to avoid the source fork's older workspace dependency overrides. Do not combine environments or change installed package files to get tests passing.
+Install each selected example separately using its README. LiveKit deliberately uses `--no-sources` to avoid the source fork's development workspace dependency overrides. Do not combine environments or change installed package files to get tests passing.
 
 ## Reproduce bounded live speech checks
 

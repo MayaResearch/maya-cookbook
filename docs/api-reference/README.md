@@ -1,6 +1,6 @@
 # Maya API reference
 
-The [Maya API documentation](https://www.mayaresearch.ai/llm.txt) is authoritative. This folder is a focused, dated **Maya Calyx-only** companion for the examples, not a new official server implementation or a completeness guarantee for future releases. The catalog intentionally selects 24 Calyx voices from that source; exclusions are publisher choices, not API retirements.
+The [Maya API documentation](https://www.mayaresearch.ai/llm.txt) is authoritative. This folder is a focused, dated companion for **Maya Research voice models**, not a new server implementation or a completeness guarantee for future releases. The current snapshot covers Maya Calyx and selects 24 of its voices; exclusions are publisher choices, not API retirements. Model-specific settings remain explicit and must be rechecked when a new model is added.
 
 - [HTTP fields and audio](http.md)
 - [WebSocket v2 lifecycle](websocket.md)

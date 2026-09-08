@@ -1,6 +1,6 @@
 # Maya Research Cookbook
 
-> Runnable Maya Calyx-only TTS recipes and voice-agent integrations with 24 selected speakers. Default model: Maya Calyx. Default voice: Aarav. Use the cookbook catalog, not excluded voices from the broader API list. Start small; read current validation before claiming a path is verified.
+> Public cookbook for Maya Research voice models: API references, runnable TTS recipes, LiveKit, Pipecat, and voice agents from scratch. Current tested model (8 September 2026): Maya Calyx, with 24 selected speakers. Default voice: Aarav. Use the dated cookbook catalog. Start small; read validation before claiming a path is verified. Future model releases require updated examples and tests.
 
 ## Start
 - [Coding-agent instructions](AGENTS.md): setup, safety and evidence rules.

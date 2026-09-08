@@ -1,8 +1,14 @@
 # Maya Research Cookbook
 
-Build speech and voice agents with **Maya Calyx**. This cookbook offers 24 selected Calyx speakers and 11 documented languages, including Indian English. Every starter example selects `Maya Calyx` and `Aarav` explicitly. Start with one example, not a large framework installation.
+The public cookbook for **Maya Research voice models**. Find API references, a simple text-to-speech call, LiveKit and Pipecat integrations, streaming examples, and a voice agent built from scratch. Every recipe includes instructions for developers and coding agents. Start with one example, not a large framework installation.
 
 **Public beta.** See [validation status](docs/validation.md) before relying on a path. A passing unit test is not proof that a microphone call, every voice, or every accent has been checked.
+
+## Current model and voices
+
+As of 8 September 2026, these recipes use **Maya Calyx**, the model currently documented by Maya Research's public API. This release includes 24 selected voices and 11 documented languages, including Indian English. Starter examples explicitly select `Maya Calyx` and `Aarav` so server-default changes cannot silently switch the model.
+
+The cookbook belongs to Maya Research, not to one model generation. Model details, voice catalogs and tested pins will be updated as supported releases change. See [maintenance](docs/maintenance.md) before adding a model. The public material here is example code, synthetic text inputs and API/catalog reference data, not private datasets, model weights or customer recordings.
 
 ## Start here
 

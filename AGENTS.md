@@ -2,7 +2,7 @@
 
 This is a cookbook, not an SDK or a model-training repository. Help the developer run the smallest appropriate recipe.
 
-Scope: **Maya Calyx only, 24 selected speakers**. Starter defaults are `Maya Calyx` and `Aarav`. Choose only a speaker in this cookbook's catalog, which intentionally excludes seven voices from the broader API reference. Do not add excluded speakers or another model, or send the unsupported `speed` field. Provider defaults are not cookbook defaults, so always send the model and voice explicitly. Indian English remains a language option.
+Scope: **The public cookbook for Maya Research voice models**. This release currently tests `Maya Calyx`, with 24 selected speakers and `Aarav` as the starter voice. Choose only a speaker in this cookbook's catalog, which intentionally excludes seven voices from the broader API reference. Do not add excluded speakers or send the unsupported `speed` field. Add a future model only after checking its public API contract and updating the catalog, examples and tests together under docs/maintenance.md. Provider defaults are not cookbook defaults, so always send the model and voice explicitly. Indian English remains a language option.
 
 ## Read before acting
 

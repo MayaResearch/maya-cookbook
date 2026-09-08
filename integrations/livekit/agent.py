@@ -26,7 +26,7 @@ def required(name):
 def build_session():
     model = os.getenv("MAYA_MODEL", "Maya Calyx")
     if model != "Maya Calyx":
-        raise ValueError("This cookbook supports Maya Calyx only")
+        raise ValueError("This cookbook release currently supports Maya Calyx")
     voice = os.getenv("MAYA_VOICE", "Aarav")
     if voice not in CALYX_VOICES:
         raise ValueError("Choose a selected Calyx speaker from the cookbook catalog")
