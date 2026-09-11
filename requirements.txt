@@ -1,0 +1,3 @@
+pipecat-ai[soniox,openai,silero,webrtc,runner]
+pipecat-maya @ git+https://github.com/MayaResearch/pipecat-maya.git@main
+python-dotenv
