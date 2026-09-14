@@ -1,59 +1,92 @@
 # Maya Research Cookbook
 
-The public cookbook for **Maya Research voice models**. Find API references, a simple text-to-speech call, LiveKit and Pipecat integrations, streaming examples, and a voice agent built from scratch. Every recipe includes instructions for developers and coding agents. Start with one example, not a large framework installation.
+Build with Maya Research voice models. **Pick one task below. You do not need to install the whole cookbook.**
 
-**Public beta.** See [validation status](docs/validation.md) before relying on a path. A passing unit test is not proof that a microphone call, every voice, or every accent has been checked.
+> **Public beta:** examples use a tested, pinned setup. Read [what is tested](docs/validation.md) before production use. Keep API keys on your server, never in browser code or agent prompts.
 
-## Current model and voices
+## 1 · Generate your first audio
 
-As of 8 September 2026, these recipes use **Maya Calyx**, the model currently documented by Maya Research's public API. This release includes 24 selected voices and 11 documented languages, including Indian English. Starter examples explicitly select `Maya Calyx` and `Aarav` so server-default changes cannot silently switch the model.
+Turn one sentence into a playable WAV file. **Needs: a Maya API key.**
 
-The cookbook belongs to Maya Research, not to one model generation. Model details, voice catalogs and tested pins will be updated as supported releases change. See [maintenance](docs/maintenance.md) before adding a model. The public material here is example code, synthetic text inputs and API/catalog reference data, not private datasets, model weights or customer recordings.
+**[Start with Python →](quickstarts/python/README.md)** · [TypeScript / Node](quickstarts/typescript/README.md) · [curl](quickstarts/curl/README.md)
 
-## Start here
+New to Maya? Choose Python. It needs no extra Python packages.
 
-| I want to… | Start with | Accounts needed |
+---
+
+## 2 · Receive streaming audio
+
+Learn how to receive audio chunks, cancel a turn and reuse a connection. **Needs: a Maya API key.**
+
+**[Open the streaming example →](examples/streaming-tts/README.md)**
+
+The example CLI saves a WAV. Your application supplies the real-time playback.
+
+---
+
+## 3 · Add Maya to a voice agent
+
+Already using a framework? Choose your guide.
+
+| Your framework | Start here | What you run |
 | --- | --- | --- |
-| Turn text into a playable WAV | [Python](quickstarts/python/README.md), [TypeScript](quickstarts/typescript/README.md), or [curl](quickstarts/curl/README.md) | Maya |
-| Add Maya to LiveKit | [LiveKit voice agent](integrations/livekit/README.md) | Maya, Soniox, OpenRouter; LiveKit only for rooms |
-| Add Maya to Pipecat | [Pipecat voice agent](integrations/pipecat/README.md) | Maya, Soniox, OpenRouter |
+| LiveKit | **[LiveKit guide →](integrations/livekit/README.md)** | A local terminal voice agent |
+| Pipecat | **[Pipecat guide →](integrations/pipecat/README.md)** | A local browser voice agent |
 
-Then explore [streaming and cancellation](examples/streaming-tts/README.md) or [build a voice agent from scratch](examples/voice-agent-from-scratch/README.md).
+These complete examples need **Maya + Soniox + OpenRouter** keys. Maya speaks, Soniox transcribes, and the LLM answers. The local modes do not need a LiveKit Cloud or Daily account. Each provider has separate billing.
 
-## Your first speech file
+[Compare the integrations and their limits →](integrations/README.md)
 
-Get a Maya API key through [Maya Research](https://www.mayaresearch.ai/) or email [charan@mayaresearch.ai](mailto:charan@mayaresearch.ai). Keep it in your shell environment or secret manager as `MAYA_API_KEY`. Never put it in a browser, source code, issue, screenshot or agent conversation.
+---
 
-From the repository root, with Python 3.12 or newer:
+## 4 · Understand the pipeline
 
-```sh
-python3 quickstarts/python/tts.py --text 'नमस्ते! आपका ऑर्डर कल पहुँच जाएगा।' --language hi --output hello.wav
-```
+Want to see how speech recognition, an LLM and Maya fit together without a voice-agent framework?
 
-Open `hello.wav` in your audio player. The script checks the response, reads its real sample rate, adds the WAV header and refuses to overwrite an existing recording. It needs no Python packages. This first example saves a complete file; it does not promise low-latency playback. For progressive audio delivery use the streaming example.
+**[Build a voice agent from scratch →](examples/voice-agent-from-scratch/README.md)**
 
-## Bring your coding agent
+This is a one-turn teaching example: record, transcribe, generate an answer, then speak. It is not a full-duplex production agent.
 
-Copy this prompt along with the repository link:
+---
 
-> Read AGENTS.md. Help me choose and run the smallest example for my task. Read that example's README and AGENTS.md. Install its pinned dependencies, identify missing credential names without asking me to paste secrets into chat, run the keyless tests, and report exactly what works. Ask before billable API calls. Preserve my files. Do not publish, deploy or rent compute.
+## 5 · Find a voice or API detail
 
-Every runnable folder has a more specific prompt. [llms.txt](llms.txt) is the compact index for agents; [AGENTS.md](AGENTS.md) describes safe execution.
+| I need… | Open |
+| --- | --- |
+| Voices, languages and sample coverage | [Speaker guide](docs/speakers.md) |
+| A request body or response format | [HTTP API](docs/api-reference/http.md) |
+| Streaming messages and lifecycle | [WebSocket API](docs/api-reference/websocket.md) |
+| Help with an error or audio problem | [Troubleshooting](docs/troubleshooting.md) |
+| Testing and production requirements | [Validation](docs/validation.md) · [Production checklist](docs/production-checklist.md) |
 
-## Find the details
+[Browse all documentation →](docs/README.md)
 
-- [API contract](docs/api-reference/README.md), [HTTP](docs/api-reference/http.md), [WebSocket v2](docs/api-reference/websocket.md), [voices and languages](docs/api-reference/catalog.json).
-- [The 24 selected Calyx speakers and sample coverage](docs/speakers.md).
-- [Troubleshooting](docs/troubleshooting.md): noisy audio, empty files, slow replies, missing endings and failed calls.
-- [Production checklist](docs/production-checklist.md): credentials, costs, interruptions, monitoring and deployment boundaries.
-- [Testing and current evidence](docs/validation.md), [maintenance](docs/maintenance.md), [source versions](docs/sources.json).
+## Get started in three steps
 
-Maya provides text-to-speech, not the entire conversational stack. The complete agents use Soniox for speech recognition and OpenRouter for the LLM. Those services have separate accounts, billing, terms and language coverage. No hidden fallback swaps your selected provider or voice.
+1. **Get a key** through [Maya Research](https://www.mayaresearch.ai/) or [email support](mailto:charan@mayaresearch.ai).
+2. **Download the cookbook** into a new directory:
 
-## Compatibility and support
+   ```sh
+   git clone https://github.com/MayaResearch/maya-cookbook.git
+   cd maya-cookbook
+   ```
 
-These examples use [Maya's public API reference](https://www.mayaresearch.ai/llm.txt), checked on 8 September 2026. Dependencies and Git integrations are pinned in per-example lockfiles. Installing one example does not install all of them.
+3. **Open one guide above.** It tells you what to install, where to configure keys, what to run and how to stop.
 
-The [Pipecat package](https://github.com/MayaResearch/pipecat-maya) is Maya-maintained. The new, independent [LiveKit plugin PR](https://github.com/livekit/agents/pull/7175) is not yet merged upstream. The cookbook pins its tested commit, not another pending PR or branch. Integration-specific limitations are listed before each run command.
+Speech requests are billable. Use synthetic text first. Do not share keys or customer recordings in issues.
 
-Report reproducible API problems to the public support contacts in the API reference. Include versions and request/session identifiers, not keys or customer recordings. See [contributing](CONTRIBUTING.md), [security](SECURITY.md) and the [code license](LICENSE). Example code does not grant model-weight, voice or customer-data rights.
+## Using a coding agent?
+
+Give your agent the repository link and this prompt:
+
+> Read AGENTS.md. Help me choose the smallest example for my task. Read that example's README and AGENTS.md, follow its pinned setup, and run its keyless checks first. Ask before paid calls or microphone use. Report missing credential names, never values. Preserve my files and report passed, failed and unverified checks separately. Do not publish or deploy.
+
+[Agent instructions](AGENTS.md) · [Compact agent index](llms.txt)
+
+## Model and integration versions
+
+The cookbook's dated catalog uses **Maya Calyx**, **24 selected voices** and **11 languages**, including Indian English. Starter examples select **Aarav** explicitly. See [the catalog](docs/api-reference/catalog.json) for the snapshot, not a promise about every future model.
+
+Framework integrations have separate compatibility limits. The cookbook pins tested commits; a newer PR is not automatically included. Check the [integration guide](integrations/README.md) and [validation record](docs/validation.md).
+
+[Contributing](CONTRIBUTING.md) · [Security](SECURITY.md) · [Maintenance](docs/maintenance.md) · [License](LICENSE)

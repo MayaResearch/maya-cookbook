@@ -1,16 +1,22 @@
 # Build a voice agent from scratch
 
-## Before you start
+[Cookbook home](../../README.md) · [Choose another guide](../README.md) · [All docs](../../docs/README.md)
+
+> **What you will build:** Learn a one-turn voice pipeline. Needs Maya, Soniox and OpenRouter keys.
+
+[Requirements](#1-check-requirements) → [Configure](#2-configure) → [Run](#3-run) → [Check the result](#4-check-the-result) → [Stop](#5-stop)
+
+## 1. Check requirements
 
 Python 3.12+, uv, microphone/headphones or a synthetic WAV. Maya, Soniox and OpenRouter keys. Linux microphone playback may also need PortAudio from your OS package manager.
 
 Read [current validation](../../docs/validation.md) and the [API reference](../../docs/api-reference/README.md). Use synthetic text first. Running speech/agent commands makes billable provider calls.
 
-## Configure
+## 2. Configure
 
 Use the local ignored `.env` or process environment as listed in `.env.example`. Microphone audio goes to Soniox, the transcript to OpenRouter, and the reply text to Maya. These are three providers with separate billing and terms. Use synthetic inputs for automated testing.
 
-## Run
+## 3. Run
 
 From `examples/voice-agent-from-scratch/` in the complete cookbook checkout:
 
@@ -21,7 +27,7 @@ uv run --locked agent.py --seconds 6 --output reply.wav
 uv run --locked agent.py --input ../../artifacts/synthetic-input.wav --output file-reply.wav --no-play
 ```
 
-## Expected result and verification
+## 4. Check the result
 
 The complete loop is in `agent.py`, deliberately without a framework:
 
@@ -38,11 +44,11 @@ Press Enter when prompted, speak for six seconds, then hear the reply. The outpu
 
 Run the repository keyless suite from the root as described in [AGENTS.md](../../AGENTS.md). An install or an HTTP 200 alone is not a passed audio check. Verify the saved file, the audible final word and any interruption behavior independently.
 
-## Stop and clean up
+## 5. Stop
 
 Ctrl+C stops recording/playback and the operation. The app handles one turn and exits, keeping only the explicitly requested local output file. A cancelled threaded HTTP request may finish until its bounded network timeout; never describe this as instant server-side barge-in.
 
-## Limits and troubleshooting
+## Limits and help
 
 For a known single-language call add `--language hi`, `--language te` or `--language en`. This applies a strict Soniox hint and the same Maya language. In testing, unconstrained STT confused some short greetings across Indic scripts; do not silently count a wrong-script transcript as correct. Leave the option unset only when automatic/mixed-language handling is intended and evaluate the transcript. Larger reasoning models may need their own reviewed token budget; this example fails rather than speaking a cut-off answer.
 

@@ -3,6 +3,12 @@
 > Public cookbook for Maya Research voice models: API references, runnable TTS recipes, LiveKit, Pipecat, and voice agents from scratch. Current tested model (8 September 2026): Maya Calyx, with 24 selected speakers. Default voice: Aarav. Use the dated cookbook catalog. Start small; read validation before claiming a path is verified. Future model releases require updated examples and tests.
 
 ## Start
+
+- [Choose a task](README.md): block-by-block entry point for developers.
+- [Quickstarts](quickstarts/README.md): choose Python, TypeScript or curl.
+- [Integration chooser](integrations/README.md): choose LiveKit or Pipecat and check requirements.
+- [Example chooser](examples/README.md): streaming or a from-scratch teaching loop.
+- [Documentation index](docs/README.md): reference, troubleshooting, testing and production.
 - [Coding-agent instructions](AGENTS.md): setup, safety and evidence rules.
 - [Python TTS](quickstarts/python/README.md): one request to a checked WAV, no packages.
 - [TypeScript TTS](quickstarts/typescript/README.md): server-side Node.

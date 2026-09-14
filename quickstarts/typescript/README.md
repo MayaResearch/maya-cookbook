@@ -1,16 +1,22 @@
 # TypeScript: server-side text to speech
 
-## Before you start
+[Cookbook home](../../README.md) · [Choose another guide](../README.md) · [All docs](../../docs/README.md)
+
+> **What you will build:** Generate one playable WAV from server-side Node. Only a Maya key is needed.
+
+[Requirements](#1-check-requirements) → [Configure](#2-configure) → [Run](#3-run) → [Check the result](#4-check-the-result) → [Stop](#5-stop)
+
+## 1. Check requirements
 
 Node 22.18+ and pnpm; Maya API key. This is not browser code.
 
 Read [current validation](../../docs/validation.md) and the [API reference](../../docs/api-reference/README.md). Use synthetic text first. Running speech/agent commands makes billable provider calls.
 
-## Configure
+## 2. Configure
 
 Set `MAYA_API_KEY` in the process environment. Optional `MAYA_MODEL`, `MAYA_VOICE` and `MAYA_LANGUAGE`. `.env.example` is a template, not automatically loaded. No key belongs in `VITE_*`, `NEXT_PUBLIC_*` or browser JavaScript.
 
-## Run
+## 3. Run
 
 From `quickstarts/typescript/` in the complete cookbook checkout:
 
@@ -22,17 +28,17 @@ pnpm start --check
 pnpm start --text 'Hello! Your order will arrive tomorrow.' --language en --output english.wav
 ```
 
-## Expected result and verification
+## 4. Check the result
 
 A playable `english.wav`. The output reports sample rate and PCM byte count. Test files exercise status failures, redirects, timeouts, format validation and exact WAV bytes.
 
 Run the repository keyless suite from the root as described in [AGENTS.md](../../AGENTS.md). An install or an HTTP 200 alone is not a passed audio check. Verify the saved file, the audible final word and any interruption behavior independently.
 
-## Stop and clean up
+## 5. Stop
 
 The process exits after one request. Ctrl+C stops it. Existing output files are never overwritten.
 
-## Limits and troubleshooting
+## Limits and help
 
 The quickstart buffers a complete bounded clip, not real-time playback. No automatic retry or fallback. The catalog comes from the shared dated JSON, not a second handwritten voice list.
 
