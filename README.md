@@ -1,10 +1,22 @@
 # Maya Research Cookbook
 
-Build with Maya Research voice models. **Pick one task below. You do not need to install the whole cookbook.**
+Add Maya Research voice models to your voice agent. **Choose your framework to open its setup guide directly.**
+
+## Start here · integrate Maya
+
+### [Maya + LiveKit →](integrations/livekit/README.md)
+
+Open the LiveKit setup guide: requirements, configuration, install commands and your first local terminal conversation.
+
+### [Maya + Pipecat →](integrations/pipecat/README.md)
+
+Open the Pipecat setup guide: requirements, configuration, install commands and your first local browser conversation.
+
+These complete examples use **Maya + Soniox + OpenRouter** keys. Maya speaks, Soniox transcribes, and the LLM answers. Each provider has separate billing. You only need the guide for your chosen framework.
 
 > **Public beta:** examples use a tested, pinned setup. Read [what is tested](docs/validation.md) before production use. Keep API keys on your server, never in browser code or agent prompts.
 
-## 1 · Generate your first audio
+## Just need text to speech?
 
 Turn one sentence into a playable WAV file. **Needs: a Maya API key.**
 
@@ -14,7 +26,7 @@ New to Maya? Choose Python. It needs no extra Python packages.
 
 ---
 
-## 2 · Receive streaming audio
+## Receive streaming audio
 
 Learn how to receive audio chunks, cancel a turn and reuse a connection. **Needs: a Maya API key.**
 
@@ -24,22 +36,7 @@ The example CLI saves a WAV. Your application supplies the real-time playback.
 
 ---
 
-## 3 · Add Maya to a voice agent
-
-Already using a framework? Choose your guide.
-
-| Your framework | Start here | What you run |
-| --- | --- | --- |
-| LiveKit | **[LiveKit guide →](integrations/livekit/README.md)** | A local terminal voice agent |
-| Pipecat | **[Pipecat guide →](integrations/pipecat/README.md)** | A local browser voice agent |
-
-These complete examples need **Maya + Soniox + OpenRouter** keys. Maya speaks, Soniox transcribes, and the LLM answers. The local modes do not need a LiveKit Cloud or Daily account. Each provider has separate billing.
-
-[Compare the integrations and their limits →](integrations/README.md)
-
----
-
-## 4 · Understand the pipeline
+## Understand the pipeline
 
 Want to see how speech recognition, an LLM and Maya fit together without a voice-agent framework?
 
@@ -49,7 +46,7 @@ This is a one-turn teaching example: record, transcribe, generate an answer, the
 
 ---
 
-## 5 · Find a voice or API detail
+## Find a voice or API detail
 
 | I need… | Open |
 | --- | --- |

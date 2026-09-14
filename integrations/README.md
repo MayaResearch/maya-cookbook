@@ -4,6 +4,12 @@
 
 Choose one framework. You do not need both.
 
+### [Maya + LiveKit · open setup →](livekit/README.md)
+
+### [Maya + Pipecat · open setup →](pipecat/README.md)
+
+Both links go straight to the complete setup instructions. Read on only if you want to compare requirements.
+
 ## LiveKit · terminal first
 
 **[Open the LiveKit guide →](livekit/README.md)**

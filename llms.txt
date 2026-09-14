@@ -4,6 +4,11 @@
 
 ## Start
 
+- [Maya + LiveKit setup](integrations/livekit/README.md): direct starting point for LiveKit users.
+- [Maya + Pipecat setup](integrations/pipecat/README.md): direct starting point for Pipecat users.
+
+For a framework integration request, go directly to the matching guide above; do not require a TTS quickstart first.
+
 - [Choose a task](README.md): block-by-block entry point for developers.
 - [Quickstarts](quickstarts/README.md): choose Python, TypeScript or curl.
 - [Integration chooser](integrations/README.md): choose LiveKit or Pipecat and check requirements.
