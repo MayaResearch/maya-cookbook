@@ -1,6 +1,19 @@
 # Coding-agent instructions: Pipecat voice agent with Maya
 
-Read [root AGENTS.md](../../AGENTS.md) first. The [README](README.md) is the single source for exact install, configure, run, verification and stop commands. Execute from this folder; retain the full checkout for shared references/helpers.
+Read [root AGENTS.md](../../AGENTS.md) first. The [README](README.md) has the integration prompt and optional demo commands.
+
+## Default: integrate into an existing app
+
+- Inspect the user's project and installed Pipecat version before changing it.
+- Change only TTS to Maya. Preserve existing STT, LLM, transport, prompts, credentials, turn detection and interruption behavior.
+- Read this folder's pyproject.toml and lockfile for the exact tested Maya dependency; inspect the demo's TTS construction as a reference, not as an app replacement.
+- Do not copy the cookbook lockfile over the customer's lockfile or silently upgrade/downgrade their framework. If compatibility is outside the tested setup, explain the mismatch and ask before a migration.
+- Do not require Soniox or OpenRouter for an existing app. Request only missing configuration names/locations; never key values in chat.
+- Run the customer's relevant tests and the applicable keyless integration checks. Paid audio, microphone use and deployment require approval. Report compatibility and untested runtime behavior honestly.
+
+## Optional: run the complete cookbook demo
+
+Only use this path when the user wants a new demo. Execute the README commands from this folder; retain the full checkout for shared references/helpers. The provider choices and behavior below apply to this demo, not to the customer's existing app.
 
 - Outcome: Open http://127.0.0.1:7860 in your chosen browser, connect, and say one short sentence. You should hear a Maya reply. Interrupt and start another turn, then disconnect. The packaged Pipecat development UI is an external pinned dependency.
 - Configuration: Use this folder's ignored `.env` or your process environment. See blank `.env.example`. Process values win. STT is Soniox `stt-rt-v5`; LLM is explicitly selected with `OPENROUTER_MODEL` through OpenRouter; Maya model/voice/language are configured independently.

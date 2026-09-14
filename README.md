@@ -1,18 +1,20 @@
 # Maya Research Cookbook
 
-Add Maya Research voice models to your voice agent. **Choose your framework to open its setup guide directly.**
+Add Maya Research voice models to your voice agent. **Give your coding agent one link and say “Integrate Maya.”**
 
 ## Start here · integrate Maya
 
 ### [Maya + LiveKit →](integrations/livekit/README.md)
 
-Open the LiveKit setup guide: requirements, configuration, install commands and your first local terminal conversation.
+Copy the page's integration prompt into your coding agent. Keep your existing app; change only TTS.
 
 ### [Maya + Pipecat →](integrations/pipecat/README.md)
 
-Open the Pipecat setup guide: requirements, configuration, install commands and your first local browser conversation.
+Copy the page's integration prompt into your coding agent. Keep your existing app; change only TTS.
 
-These complete examples use **Maya + Soniox + OpenRouter** keys. Maya speaks, Soniox transcribes, and the LLM answers. Each provider has separate billing. You only need the guide for your chosen framework.
+**Already have an app?** Keep your STT, LLM and transport. Add a Maya key for speech. Each page starts with a ready-to-copy agent prompt; manual instructions and optional full demos are below.
+
+**Need a new demo?** The optional demos use Maya + Soniox + OpenRouter, with separate provider accounts and billing.
 
 > **Public beta:** examples use a tested, pinned setup. Read [what is tested](docs/validation.md) before production use. Keep API keys on your server, never in browser code or agent prompts.
 

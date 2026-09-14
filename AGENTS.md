@@ -6,6 +6,8 @@ Scope: **The public cookbook for Maya Research voice models**. This release curr
 
 ## Read before acting
 
+For “integrate Maya” in an existing LiveKit or Pipecat app, default to replacing only TTS. Preserve the user's STT, LLM, transport, prompts and turn handling. The cookbook's Soniox/OpenRouter stack is an optional demo, not a required migration. Check compatibility with the pinned integration before editing; do not replace a customer's lockfile or force a framework version change.
+
 1. Read README.md, docs/validation.md and the selected example's README and AGENTS.md.
 2. Use docs/api-reference/catalog.json for the dated catalog snapshot. Read docs/api-reference/README.md for authoritative source links and known disagreements. Do not invent voices or endpoints.
 3. Keep the exact selected Maya model/voice and provider. Do not patch dependency caches, silently substitute a provider, or remove failing tests to report success.

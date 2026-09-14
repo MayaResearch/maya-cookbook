@@ -2,7 +2,29 @@
 
 [Cookbook home](../../README.md) · [Choose another guide](../README.md) · [All docs](../../docs/README.md)
 
-> **What you will build:** Run a local terminal voice agent. Needs Maya, Soniox and OpenRouter keys.
+## Give this link to your coding agent
+
+Copy this prompt into your coding agent in your existing project:
+
+```text
+Integrate Maya TTS into my existing LiveKit app using:
+https://github.com/MayaResearch/maya-cookbook/blob/main/integrations/livekit/README.md
+
+Read this guide and its linked AGENTS.md. Change only the TTS integration.
+Keep my existing STT, LLM, transport, prompts and turn-handling settings.
+Check my framework version against the cookbook's tested pin before editing;
+do not force an upgrade or replace my lockfile. Ask if compatibility requires it.
+Use the documented Maya model and a voice supported by this integration.
+Ask only for missing configuration. Never ask me to paste an API key into chat.
+Run keyless checks first. Ask before paid calls, microphone use or deployment.
+Show the changes and report what passed and what still needs testing.
+```
+
+**Already have an agent?** Maya is your TTS replacement. You need a Maya key in addition to whatever your existing app already uses. You do not need to switch to Soniox or OpenRouter.
+
+**Starting from scratch or setting it up yourself?** The optional complete demo below uses Maya, Soniox and OpenRouter. It does not describe a mandatory stack for an existing app.
+
+## Optional · run the complete terminal demo
 
 [Requirements](#1-check-requirements) → [Configure](#2-configure) → [Run](#3-run) → [Check the result](#4-check-the-result) → [Stop](#5-stop)
 
@@ -50,6 +72,6 @@ Custom Maya URLs must use HTTPS/WSS; plaintext HTTP/WS is rejected before any re
 
 See [troubleshooting](../../docs/troubleshooting.md) and [production requirements](../../docs/production-checklist.md). Tested version/date and any unverified steps are in the validation report; don't infer a universal quality or latency guarantee.
 
-## Ask your coding agent
+## Ask your coding agent to run this demo instead
 
 > Read the root AGENTS.md and integrations/livekit/AGENTS.md. Run this example using this README's pinned setup. Report missing credential names without printing secrets. Run the relevant keyless checks first. Ask before billable calls or using my microphone. Preserve existing files and the selected providers/model/voice. Verify the documented output and report passed, failed and unverified checks separately. Do not publish, deploy or provision resources.

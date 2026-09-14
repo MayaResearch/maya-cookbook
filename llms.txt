@@ -8,6 +8,7 @@
 - [Maya + Pipecat setup](integrations/pipecat/README.md): direct starting point for Pipecat users.
 
 For a framework integration request, go directly to the matching guide above; do not require a TTS quickstart first.
+Default to TTS-only changes in the user's existing app. Preserve their other providers, transport and turn handling. Soniox/OpenRouter are optional demo choices. Check framework compatibility and preserve the customer's lockfile; ask before any required migration.
 
 - [Choose a task](README.md): block-by-block entry point for developers.
 - [Quickstarts](quickstarts/README.md): choose Python, TypeScript or curl.

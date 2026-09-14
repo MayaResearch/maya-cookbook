@@ -9,6 +9,7 @@ Choose one framework. You do not need both.
 ### [Maya + Pipecat · open setup →](pipecat/README.md)
 
 Both links go straight to the complete setup instructions. Read on only if you want to compare requirements.
+Each page starts with a prompt to copy into your coding agent: integrate only Maya TTS and preserve the rest of your existing app. The requirements below are for the optional full demos, not mandatory replacements for your own providers.
 
 ## LiveKit · terminal first
 
