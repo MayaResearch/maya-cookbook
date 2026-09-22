@@ -9,5 +9,5 @@
     "test": "node --experimental-strip-types --test tts.test.ts",
     "check": "tsc --noEmit"
   },
-  "devDependencies": {"typescript": "7.0.2", "@types/node": "22.19.0"}
+  "devDependencies": {"typescript": "7.0.2", "@types/node": "26.6.2"}
 }
