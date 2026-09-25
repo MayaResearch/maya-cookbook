@@ -24,6 +24,29 @@ Show the changes and report what passed and what still needs testing.
 
 **Starting from scratch or setting it up yourself?** The optional complete demo below uses Maya, Soniox and OpenRouter. It does not describe a mandatory stack for an existing app.
 
+## Already using Pipecat 1.11?
+
+Use **pipecat-maya v0.2.0**, which targets **Pipecat 1.11.0**:
+
+```sh
+pip install "pipecat-maya @ git+https://github.com/MayaResearch/pipecat-maya.git@v0.2.0"
+```
+
+For a uv-managed existing project:
+
+```sh
+uv add "pipecat-maya @ git+https://github.com/MayaResearch/pipecat-maya.git@v0.2.0"
+```
+
+Run this in your application's environment and regenerate its own lockfile.
+Keep your existing STT, LLM and transport. The adapter's 1.11.0 compatibility
+checks cover Pipecat pipelines and local protocol tests, not a new live-audio
+or microphone certification. See the [release validation](https://github.com/MayaResearch/pipecat-maya/blob/v0.2.0/docs/validation.md).
+
+**The optional complete demo below still uses its separately tested 1.8.1 lockfile.**
+Do not copy that lockfile into your 1.11 app or downgrade your app to run Maya.
+The original pipecat-maya v0.1.0 remains available for 1.8.1 users.
+
 ## Optional · run the complete browser demo
 
 [Requirements](#1-check-requirements) → [Configure](#2-configure) → [Run](#3-run) → [Check the result](#4-check-the-result) → [Stop](#5-stop)

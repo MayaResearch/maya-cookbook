@@ -5,6 +5,7 @@ Read [root AGENTS.md](../../AGENTS.md) first. The [README](README.md) has the in
 ## Default: integrate into an existing app
 
 - Inspect the user's project and installed Pipecat version before changing it.
+- For an existing Pipecat 1.11.0 app, use pipecat-maya v0.2.0 as documented in README.md. The optional demo's 1.8.1 lockfile is not a requirement for that app. Keep the customer's lockfile and update it with their package manager. Report adapter compatibility checks separately from live-audio validation.
 - Change only TTS to Maya. Preserve existing STT, LLM, transport, prompts, credentials, turn detection and interruption behavior.
 - Read this folder's pyproject.toml and lockfile for the exact tested Maya dependency; inspect the demo's TTS construction as a reference, not as an app replacement.
 - Do not copy the cookbook lockfile over the customer's lockfile or silently upgrade/downgrade their framework. If compatibility is outside the tested setup, explain the mismatch and ask before a migration.
